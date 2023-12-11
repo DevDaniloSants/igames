@@ -1,0 +1,23 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.3rem;
+    color: var(--textColor);
+}
+
+.login > span:first-child{
+    display: none;
+}
+
+@media screen and (max-width: 365px) {
+    .login > span:first-child{
+        display: block;
+        color: var(--textColor);
+    }
+    .login > div{
+        display: none;
+    }
+}

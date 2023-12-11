@@ -1,0 +1,6 @@
+.default {
+    text-align: center;
+    background-color: var(--sidebard-bg);
+    border-radius: 5px;
+    padding: 1rem;
+}

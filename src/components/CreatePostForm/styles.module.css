@@ -1,0 +1,23 @@
+.form {
+    width: 50%;
+    min-width: 250px;
+    margin: 0 auto;
+}
+
+.form label {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.form label input, .form label textarea {
+    border-bottom: 2px solid var(--shadow);
+    padding: 0.5rem 0;
+}
+
+.form  button {
+    width: 100%;
+}

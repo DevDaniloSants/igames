@@ -1,0 +1,17 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  width: 115px;
+  gap: 0.3rem;
+  transition: color 1s;
+}
+
+.socials svg{
+  transition: all 0.3s;
+}
+
+.socials svg:hover{
+  color: var(--logo-color);
+  transform: translateY(-3px);
+}
+
