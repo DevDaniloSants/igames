@@ -4,12 +4,11 @@
     background-color: var(--sidebard-bg);
     border-radius: 5px;
     padding: 1rem;
-    position: relative;
+
 }
 
 .default h1 {
     font-size: 3em;
     margin-bottom: 5rem;
-    position: relative;
 }
 
