@@ -1,57 +1,70 @@
-.btnToggle{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    padding: 0.5rem 1.2rem;
-    border-radius: 8px 0 8px 0;
-    background-color: var(--logo-color);
-    text-transform: uppercase;
-    font-size: 1em;
-    color: #fff;
+.start {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bodyForm img {
+  background-color: var(--shadow);
+  border-radius: 8px;
+  padding: 0.5rem;
+  width: 60px;
 }
 
 .bodyForm h1 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1em;
-    color: var(--logo-color);
-    font-weight: 500;
-    margin-top: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1em;
+  color: var(--logo-color);
+  font-weight: 500;
 }
 
 .bodyForm form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-top: 20px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 20px;
+  text-align: center;
 }
 
 .bodyForm form label {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    gap: 10px;
-    text-align: left;
-    color: #727070;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 10px;
+  text-align: left;
+  color: var(--secondary-color);
 }
 
 .bodyForm form label svg {
-    position: absolute;
-    top: 53px;
-    left: 10px;
-    color:  var(--logo-color);
+  position: absolute;
+  top: 51px;
+  left: 10px;
+  color: var(--inputLogin-svg-color);
 }
 
 .bodyForm form label input {
-    border: 1px solid rgba(0, 0, 0, 0.116);
-    padding: 1rem  2rem ;
-    font-size: 1em;
-    color: #000;
+  border: 1px solid var(--shadow);
+  border-radius: 2px;
+  padding: 1rem 2rem;
+  font-size: 1em;
 }
 
-.bodyForm form label input::placeholder{
-    color: #353434;
+.bodyForm form label input::placeholder {
+  color: var(--inputLogin-text-color);
 }
 
+.end {
+  text-align: center;
+  margin: 1rem 0;
+  font-size: 0.8em;
+}
 
+.end button {
+  color: var(--logo-color);
+  font-weight: bold;
+  font-size: 1em;
+  padding: 0.2rem;
+}

@@ -1,0 +1,8 @@
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home h1 {
+  position: relative;
+}

@@ -2,57 +2,69 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
 .ligth-theme {
-  --background: #f4f6f5;
-  --textColor: #272727;
+  --primary-color: #f4f6f5;
+  --secondary-color: #272727;
   --shadow: rgba(117, 116, 116, 0.103);
+
+  /* inputs */
   --inputSearchBorder-color: rgb(228, 227, 227);
-  --logo-color: rgb(248, 58, 58);
-   
- /* Header */
- 
- --header-bg: #ffffff;
-  
- /* Sidebar colors*/
+  --logo-color: #ec304c;
+  --inputLogin-text-color: #a7a4a4;
+  --inputLogin-svg-color: #bdbabb;
+
+  /* Header */
+  --header-bg: #ffffff;
+
+  /* Sidebar colors*/
   --sidebard-bg: #fff;
   --sidebar-menu-hover: #e2e4e5;
   --sidebar-menu-color: #555252;
-  
-  /* Modal */
-  --modal-color: #fff
 
+  /* Modal */
+  --modal-color: #fff;
+
+  /* Card Details */
+  --author-text-color: #444343;
 }
 
 .dark-theme {
-    --background: #101011;
-    --textColor: #fefeff;
-    --shadow: rgba(71, 70, 70, 0.226);
-    --inputSearchBorder-color: #252525;
-    --logo-color: rgb(248, 58, 58);
-      
+  --primary-color: #161616;
+  --secondary-color: #fefeff;
+  --shadow: rgba(71, 70, 70, 0.226);
+
+  /* inputs */
+  --inputSearchBorder-color: #3f3e3e;
+  --logo-color: #ec304c;
+  --inputLogin-text-color: #666666;
+  --inputLogin-svg-color: #ec304c;
+
   /* Header */
   --header-bg: #101011;
-  
+
   /* Sidebar colors*/
   --sidebard-bg: #1b1b1b;
-  --sidebar-menu-hover: rgb(248, 58, 58);
+  --sidebar-menu-hover: #ec304c;
   --sidebar-menu-color: #fefeff;
 
   /* Modal */
-  --modal-color: #fff
+  --modal-color: #fff;
+
+  /* Card Details */
+  --author-text-color: #ec304c;
 }
 
 .container {
-   height: 100vh;
-   display: flex;
-   flex-direction: column;
-   background-color: var(--background);
-   color: var(--textColor);
-   transition: background 1s;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: background 1s;
 }
 
 header {
@@ -60,14 +72,14 @@ header {
   position: fixed;
   width: 100vw;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: var(--header-bg);
   padding: 1rem;
   border-bottom: 1px solid var(--shadow);
-  
 }
 
-.hamburguer{
+.hamburguer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,26 +88,26 @@ header {
 }
 
 .logo {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0rem 1rem;
-
+  font-size: 1.2em;
+  transition: all 0.5s;
 }
 
-.logo svg{
-  width: 30px;
-  height: 30px;
+.logo:hover {
+  transform: translateY(-3px);
+}
+
+.logo > span {
   color: var(--logo-color);
+  font-weight: bold;
 }
 
-.hamburguer > svg{
+.hamburguer > svg {
   width: 20px;
   height: 70px;
-  color: var(--textColor);
+  color: var(--secondary-color);
 }
 
-
-.header_end{
+.header_end {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -115,34 +127,37 @@ footer {
   flex: 0 1 auto;
   padding: 1rem;
   text-align: center;
-  background: var(--textColor);
-  color: var(--background);
+  background: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 /* Styles globais de inputs e buttons */
-input, button,textarea {
+input,
+button,
+textarea {
   border: none;
   background: transparent;
   outline: none;
   cursor: pointer;
-  color: var(--textColor);
+  color: var(--secondary-color);
 }
 
-input::placeholder, textarea::placeholder{
-  color: var(--textColor);
+input::placeholder,
+textarea::placeholder {
+  color: var(--secondary-color);
 }
 
 a {
   text-decoration: none;
-  color: var(--textColor);
+  color: var(--secondary-color);
 }
 
-.error {
+span.error {
+  display: flex;
+  margin-bottom: 5px;
   background-color: rgb(252, 195, 209);
   border: 1px solid rgb(243, 136, 150);
   border-radius: 10px;
   padding: 1rem;
   color: rgb(211, 29, 29);
 }
-
-

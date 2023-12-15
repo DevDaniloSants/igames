@@ -13,17 +13,31 @@ const Login = () => {
     <section className={styles.bodyForm}>
       {toggleForm ? (
         <>
-          <button className={styles.btnToggle} onClick={handleToggle}>
-            Registre-se
-          </button>
+          <div className={styles.start}>
+            <img src="/logo.svg" alt="logo" />
+            <h1>Login</h1>
+          </div>
           <LoginForm />
+          <div className={styles.end}>
+            <span>Não possui uma conta ?</span>
+            <button className={styles.btnToggle} onClick={handleToggle}>
+              Registre-se
+            </button>
+          </div>
         </>
       ) : (
         <>
-          <button className={styles.btnToggle} onClick={handleToggle}>
-            Login
-          </button>
+          <div className={styles.start}>
+            <img src="/logo.svg" alt="logo" />
+            <h1>Login</h1>
+          </div>
           <Register />
+          <div className={styles.end}>
+            <span>Já possui uma conta ?</span>
+            <button className={styles.btnToggle} onClick={handleToggle}>
+              Login
+            </button>
+          </div>
         </>
       )}
     </section>

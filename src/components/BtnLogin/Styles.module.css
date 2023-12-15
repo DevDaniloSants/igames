@@ -1,23 +1,23 @@
 .login {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 0.3rem;
-    color: var(--textColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0.3rem;
+  color: var(--secondary-color);
 }
 
-.login > span:first-child{
-    display: none;
+.login > span:first-child {
+  display: none;
 }
 
 @media screen and (max-width: 365px) {
-    .login > span:first-child{
-        display: block;
-        color: var(--textColor);
-    }
-    .login > div{
-        display: none;
-    }
+  .login > span:first-child {
+    display: block;
+    color: var(--secondary-color);
+  }
+  .login > div {
+    display: none;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // Hooks
 import { useAuthentication } from '../../../hooks/useAuthentication';
@@ -50,7 +50,6 @@ const Register = () => {
 
   return (
     <div>
-      <h1>Registre-se</h1>
       <form onSubmit={handleSumit}>
         <label>
           <span>Nome</span>

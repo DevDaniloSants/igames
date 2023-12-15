@@ -1,17 +1,31 @@
 .socials {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  width: 115px;
-  gap: 0.3rem;
+  min-width: 115px;
   transition: color 1s;
 }
 
-.socials svg{
+.socials svg {
   transition: all 0.3s;
+  position: relative;
 }
 
-.socials svg:hover{
+.socials svg:hover {
   color: var(--logo-color);
-  transform: translateY(-3px);
 }
 
+.socials span::before {
+  content: '';
+  background-color: var(--logo-color);
+  width: 17px;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.socials span:hover::before {
+  opacity: 1;
+}

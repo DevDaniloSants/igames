@@ -1,8 +1,8 @@
 // React router
 import { Outlet } from 'react-router-dom';
+
 // Icons
 import { FaBars } from 'react-icons/fa';
-import { PiGameControllerFill } from 'react-icons/pi';
 
 // Context
 import { useTheme } from '../context/ThemeContext';
@@ -36,15 +36,13 @@ const RootLayout = () => {
         <button className="hamburguer" onClick={handleSidebar}>
           <FaBars />
         </button>
-        <div className="logo">
-          <PiGameControllerFill />
-        </div>
+        <span className='logo'><span>IG</span>ames</span>
         <div className="header_end">
           <Socials />
           {!user && <BtnLogin />}
         </div>
-        <SideBar isOpen={sidebar} handleClick={handleSidebar} />
       </header>
+      <SideBar isOpen={sidebar} handleClick={handleSidebar} />
       <main>
         <Outlet />
       </main>

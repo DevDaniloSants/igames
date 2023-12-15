@@ -4,11 +4,12 @@ import styles from './Styles.module.css';
 const Socials = () => {
   return (
     <div className={styles.socials}>
-      <FaInstagram />
-      <FaYoutube />
-      <FaFacebook />
-      <FaTwitter />
-      <FaDiscord />
+      <span><FaInstagram /></span>
+      <span><FaYoutube /></span>
+      <span> <FaFacebook /></span>
+      <span><FaTwitter /></span>
+      <span><FaDiscord /></span>
+      
     </div>
   );
 };

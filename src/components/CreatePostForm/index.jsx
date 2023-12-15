@@ -14,7 +14,7 @@ const CreatePostForm = () => {
   const [image, setImage] = useState('');
   const [body, setBody] = useState('');
   const [tags, setTags] = useState([]);
-  const [formError, setFormError] = useState('');
+  const [formError, setFormError] = useState(null);
 
   const { user } = useAuthContext();
 
@@ -22,28 +22,32 @@ const CreatePostForm = () => {
 
   const { insertDocument, response } = useInsertDocument('posts');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    let newFormError = '';
+    let errorMessage = '';
 
     // validate image
     try {
       new URL(image);
     } catch (error) {
-      newFormError = 'A imagem precisa ser uma URL.';
+      errorMessage = 'A imagem precisa ser uma URL.';
+    }
+
+    // check values
+    if (!title || !image || !tags || !body) {
+      errorMessage = 'Por favor, preencha todos os campos!';
+    }
+
+    // If there's an error, set it and return
+    if (errorMessage) {
+      setFormError(errorMessage);
+      return;
     }
 
     // create tags array
     const tagsArray = tags.split(',').map((tag) => tag.trim().toLowerCase());
-
-    // check values
-    if (!title || !image || !tags || !body) {
-      newFormError = 'Por favor, preencha todos os campos!';
-    }
-
-    console.log(tagsArray);
-
-    console.log({
+    // submit the form
+    const submissionError = await insertDocument({
       title,
       image,
       body,
@@ -52,21 +56,13 @@ const CreatePostForm = () => {
       createdBy: user.displayName,
     });
 
-    if (newFormError) {
-      setFormError(newFormError);
-    } else {
-      setFormError('');
-      insertDocument({
-        title,
-        image,
-        body,
-        tags: tagsArray,
-        uid: user.uid,
-        createdBy: user.displayName,
-      });
-
-      navigate('/');
+    if (submissionError) {
+      setFormError(submissionError);
+      return;
     }
+
+    // redirect to home page
+    navigate('/');
   };
 
   return (
@@ -76,7 +72,6 @@ const CreatePostForm = () => {
         <input
           type="text"
           name="title"
-          required
           placeholder="Adicione um título"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
