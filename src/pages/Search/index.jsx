@@ -1,16 +1,17 @@
-// hooks
-import { useEffect } from 'react';
-import PostDetails from '../../components/PostDetails';
 import { useFetchDocuments } from '../../hooks/useFetchDocuments';
 import { useQuery } from '../../hooks/useQuery';
-import { useNavigate } from 'react-router-dom';
+
+// styles
+import styles from './Styles.module.css';
+
+// components
+import PostDetails from '../../components/PostDetails';
 
 const Search = () => {
   const query = useQuery();
   const search = query.get('q');
 
-  const { documents: posts } = useFetchDocuments('posts', search);
-  const navigate = useNavigate();
+  const { documents: posts, loading } = useFetchDocuments('posts', search);
 
   return (
     <div>
@@ -21,8 +22,15 @@ const Search = () => {
             <p>Não foram encontradas buscas para {search}</p>
           </>
         )}
-        {posts &&
-          posts.map((post) => <PostDetails key={post.id} post={post} />)}
+        {posts && (
+          <>
+            <div className={styles.news}>
+              {posts.map((post) => (
+                <PostDetails key={post.id} post={post} />
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
