@@ -20,7 +20,7 @@ const Search = () => {
     <form className={styles.search} onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="BUSCAR"
+        placeholder="BUSCAR POR TAGS"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />

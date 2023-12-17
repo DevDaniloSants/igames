@@ -19,7 +19,10 @@ const PostDetails = ({ post }) => {
           </span>
           <div className={styles.tags}>
             {post.tags.map((tag) => (
-              <p key={tag}>{tag}</p>
+              <p key={tag}>
+                <span>#</span>
+                {tag}
+              </p>
             ))}
           </div>
         </div>

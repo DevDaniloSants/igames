@@ -28,9 +28,6 @@ export const useFetchDocuments = (docCollection, search = null, uid = null) => {
       try {
         let newQuery;
 
-        // search
-
-        // dashboard
 
         if (search) {
           newQuery = await query(
