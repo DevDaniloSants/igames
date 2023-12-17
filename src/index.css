@@ -10,6 +10,7 @@
   --primary-color: #f4f6f5;
   --secondary-color: #272727;
   --shadow: rgba(117, 116, 116, 0.103);
+  --card-background: #fff;
 
   /* inputs */
   --inputSearchBorder-color: rgb(228, 227, 227);
@@ -36,6 +37,7 @@
   --primary-color: #161616;
   --secondary-color: #fefeff;
   --shadow: rgba(71, 70, 70, 0.226);
+  --card-background: #1d1d1d;
 
   /* inputs */
   --inputSearchBorder-color: #3f3e3e;

@@ -1,13 +1,16 @@
 // hooks
+import { useEffect } from 'react';
 import PostDetails from '../../components/PostDetails';
 import { useFetchDocuments } from '../../hooks/useFetchDocuments';
 import { useQuery } from '../../hooks/useQuery';
+import { useNavigate } from 'react-router-dom';
 
 const Search = () => {
   const query = useQuery();
   const search = query.get('q');
 
   const { documents: posts } = useFetchDocuments('posts', search);
+  const navigate = useNavigate();
 
   return (
     <div>

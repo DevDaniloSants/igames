@@ -12,7 +12,15 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <h1>Notícias</h1>
-      {posts && posts.map((post) => <PostDetails post={post} key={post.id} />)}
+      {posts && (
+        <>
+          <div className={styles.news}>
+            {posts.map((post) => (
+              <PostDetails post={post} key={post.id} />
+            ))}
+          </div>
+        </>
+      )}
       {posts && posts.length === 0 && (
         <>
           <button>Criar uma postagem</button>

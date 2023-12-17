@@ -4,7 +4,7 @@
   <img src="https://i.ibb.co/zFPrf20/logo.png" alt="Exemplo imagem">
 </p>
 
-> Projeto de um site voltado para os jogos eletrônicos. 
+> Projeto de um site voltado para os jogos eletrônicos.
 
 ### Ajustes e melhorias
 
@@ -12,7 +12,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 - [ ] Terminar o css das páginas
 - [ ] Adicionar a opção de editar um post e excluir
-- [ ] Criar funcionalidade de busca
+- [x] Criar funcionalidade de busca
 - [ ] Estruturar o dashboard
 
 ## 💼 Tecnologias utilizadas
@@ -25,7 +25,7 @@ Para o desenvolvimento deste site utilizei as seguintes tecnologias:
 
 ## 🚀 Instalando IGames
 
-Para instalar o  IGames, siga estas etapas:
+Para instalar o IGames, siga estas etapas:
 
 ```
 npm install
