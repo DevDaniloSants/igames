@@ -9,6 +9,7 @@ import Pc from './pages/Pc';
 import Playstation from './pages/Playstation';
 import Xbox from './pages/Xbox';
 import NSwitch from './pages/Switch';
+import Search from './pages/Search';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: '/dashboard',
         element: <Dashboard />,
+      },
+      {
+        path: '/search/',
+        element: <Search />,
       },
     ],
   },
