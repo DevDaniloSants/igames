@@ -6,21 +6,13 @@
 
 > Projeto de um site voltado para os jogos eletrônicos.
 
-### Ajustes e melhorias
-
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
-
-- [ ] Terminar o css das páginas
-- [ ] Adicionar a opção de editar um post e excluir
-- [x] Criar funcionalidade de busca
-- [ ] Estruturar o dashboard
-
 ## 💼 Tecnologias utilizadas
 
 Para o desenvolvimento deste site utilizei as seguintes tecnologias:
 
 - React
 - JavaScript
+- Firebase
 - CSS Module
 
 ## 🚀 Instalando IGames
