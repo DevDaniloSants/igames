@@ -1,0 +1,7 @@
+.default {
+  height: 100%;
+  text-align: center;
+  background-color: var(--card-background);
+  border-radius: 5px;
+  padding: 1rem;
+}

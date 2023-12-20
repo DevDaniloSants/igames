@@ -4,15 +4,7 @@ import styles from './Styles.module.css';
 import { Link } from 'react-router-dom';
 
 // icons
-import {
-  FaAngleLeft,
-  FaHome,
-  FaNewspaper,
-  FaXbox,
-  FaPlaystation,
-} from 'react-icons/fa';
-import { BsNintendoSwitch } from 'react-icons/bs';
-import { FaComputer } from 'react-icons/fa6';
+import { FaAngleLeft, FaHome, FaNewspaper } from 'react-icons/fa';
 import { MdDashboard } from 'react-icons/md';
 
 // Components
@@ -39,18 +31,6 @@ const SideBar = ({ isOpen, handleClick }) => {
         <ul>
           <Link to={'/'}>
             <FaHome /> Home
-          </Link>
-          <Link to={'/posts/playstation'}>
-            <FaPlaystation /> Playstation
-          </Link>
-          <Link to={'/posts/xbox'}>
-            <FaXbox /> Xbox
-          </Link>
-          <Link to={'/posts/switch'}>
-            <BsNintendoSwitch /> Switch
-          </Link>
-          <Link to={'/posts/pc'}>
-            <FaComputer /> Pc
           </Link>
           {user && (
             <>

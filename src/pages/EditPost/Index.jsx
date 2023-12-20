@@ -1,9 +1,9 @@
 import styles from './styles.module.css';
 
 import { useRedirect } from '../../hooks/useRedirect';
-import CreatePostForm from '../../components/CreatePostForm';
+import EditPostForm from '../../components/EditPostForm';
 
-const CreatePost = () => {
+const EditPost = () => {
   const { redirect } = useRedirect();
 
   // Verifica se o usuário está cadastrado
@@ -11,10 +11,9 @@ const CreatePost = () => {
 
   return (
     <div className={styles.default}>
-      <h1>Criar Post</h1>
-      <CreatePostForm />
+      <EditPostForm />
     </div>
   );
 };
 
-export default CreatePost;
+export default EditPost;

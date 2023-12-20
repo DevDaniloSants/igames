@@ -6,7 +6,6 @@ import { useAuthContext } from '../../context/AuthContext';
 import { useRedirect } from '../../hooks/useRedirect';
 import { useFetchDocuments } from '../../hooks/useFetchDocuments';
 
-
 // Components
 import CardDashboard from '../../components/CardDashboard';
 
@@ -15,6 +14,8 @@ const Dashboard = () => {
   const uid = user.uid;
 
   const { redirect } = useRedirect();
+
+  // Verifica se o usuário está cadastrado
   redirect();
 
   // posts do usuário
