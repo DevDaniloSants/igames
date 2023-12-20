@@ -1,0 +1,25 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard h2 {
+    margin-bottom: 1rem;
+}
+
+
+@media (max-width: 408px) {
+  .dashboard {
+    align-items: normal;
+  }
+
+  .dashboard h2 {
+    text-align: center;
+  }
+  .table_container {
+    overflow-x: auto;
+  }
+
+}

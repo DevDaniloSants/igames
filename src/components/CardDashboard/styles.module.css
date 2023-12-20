@@ -1,0 +1,20 @@
+.post {
+    border-bottom: 1px solid var(--shadow);
+  }
+
+.btns {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  margin-left: 10px;
+  border: transparent;
+}
+
+
+@media (max-width: 408px) {
+
+  .title_post {
+    text-wrap: nowrap;
+  }
+
+}

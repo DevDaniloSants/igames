@@ -44,7 +44,7 @@
 .title p {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* Isso adiciona reticências (...) quando o texto ultrapassa o limite */
+  text-overflow: ellipsis;
   max-width: 200px;
 }
 

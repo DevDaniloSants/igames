@@ -155,6 +155,14 @@ a {
   color: var(--secondary-color);
 }
 
+table {
+  border: none;
+}
+
+tr{
+    border: 1px solid transparent
+}
+
 span.error {
   display: flex;
   margin-bottom: 5px;
@@ -163,4 +171,23 @@ span.error {
   border-radius: 10px;
   padding: 1rem;
   color: rgb(211, 29, 29);
+}
+
+.btn {
+  background-color: transparent;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 80px;
+  border: 1px solid var(--secondary-color);
+  transition: all 0.5s;
+}
+
+.btn_default:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn_danger:hover {
+  background-color: var(--logo-color);
+  color: var(--primary-color);
 }
