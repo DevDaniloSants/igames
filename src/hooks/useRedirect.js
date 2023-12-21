@@ -16,7 +16,7 @@ export const useRedirect = () => {
       if (!user) {
         return navigate('/');
       }
-    }, []);
+    }, [user]);
 
   }
 

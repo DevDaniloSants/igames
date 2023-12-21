@@ -36,7 +36,9 @@ const RootLayout = () => {
         <button className="hamburguer" onClick={handleSidebar}>
           <FaBars />
         </button>
-        <span className='logo'><span>IG</span>ames</span>
+        <span className="logo">
+          <span>IG</span>ames
+        </span>
         <div className="header_end">
           <Socials />
           {!user && <BtnLogin />}

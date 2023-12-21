@@ -1,7 +1,7 @@
 .socials {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 8px;
   min-width: 115px;
   transition: color 1s;
 }

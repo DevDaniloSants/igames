@@ -34,7 +34,6 @@ export const useDeleteDocument = (docCollection) => {
 
   const deleteDocument = async (id) => {
     checkCancelBeforeDispatch();
-    console.log(cancelled);
     dispatch({ type: 'LOADING' });
 
     try {

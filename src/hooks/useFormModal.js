@@ -7,7 +7,6 @@ export const useFormModal = () => {
 
     const handleModal = () => {
       setModal(!modal)
-      console.log(modal)
     }
 
     const handleToggle = () => {

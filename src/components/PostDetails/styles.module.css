@@ -67,7 +67,8 @@
 
 .end .tags {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.3rem;
 }
 
 .end .tags p {

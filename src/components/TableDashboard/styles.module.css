@@ -1,6 +1,6 @@
 .post {
-    border-bottom: 1px solid var(--shadow);
-  }
+  border-bottom: 1px solid var(--shadow);
+}
 
 .btns {
   display: flex;
@@ -10,11 +10,11 @@
   border: transparent;
 }
 
-
 @media (max-width: 408px) {
-
+  .table_container {
+    overflow-x: auto;
+  }
   .title_post {
     text-wrap: nowrap;
   }
-
 }

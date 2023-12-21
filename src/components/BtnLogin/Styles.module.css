@@ -1,11 +1,20 @@
 .login {
+  position: absolute;
+  top: 82px;
+  right: 10px;
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  padding: 0.3rem;
-  color: var(--secondary-color);
+  padding: .5rem;
+
+  font-size: 0.8em;
+  background-color: var(--header-bg);
+  border-radius: 0px 0 10px 10px;
+  border: 1px solid var(--shadow);
+  border-top: none;
 }
 
 .login > span:first-child {
@@ -15,7 +24,6 @@
 @media screen and (max-width: 365px) {
   .login > span:first-child {
     display: block;
-    color: var(--secondary-color);
   }
   .login > div {
     display: none;

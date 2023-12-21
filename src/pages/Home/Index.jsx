@@ -8,7 +8,6 @@ import PostDetails from '../../components/PostDetails';
 
 const Home = () => {
   const { documents: posts, loading, error } = useFetchDocuments('posts');
-
   return (
     <div className={styles.home}>
       <h1>Notícias</h1>

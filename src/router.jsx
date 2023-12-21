@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard/Index';
 import Search from './pages/Search';
 import Post from './pages/Post';
 import EditPost from './pages/EditPost/Index';
+import Error from './pages/Error';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: '/posts/edit/:id',
         element: <EditPost />,
+      },
+      {
+        path: '*',
+        element: <Error />,
       },
     ],
   },
